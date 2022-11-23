@@ -20,16 +20,13 @@ public class FileUploadController {
 	}
 	
 	@RequestMapping("/upload")
-	public String upload(
-			@RequestParam("email") String email,
-			@RequestParam("file") MultipartFile multipartFile,
-			Model model) {
-		System.out.println("email:" + email);
+	public String upload(@RequestParam("email") String email, @RequestParam("file") MultipartFile multipartFile, Model model) {
+		
+		System.out.println("email : " + email);
 		
 		String url = fileUploadService.restore(multipartFile);
 		
 		model.addAttribute("url", url);
 		return "/WEB-INF/views/result.jsp";
 	}
-	
 }
