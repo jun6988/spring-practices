@@ -32,4 +32,9 @@
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<finalName>aoptest</finalName>
+	</build>
+	
 </project>
